@@ -143,7 +143,7 @@ appR:
 # Make all the targets.
 all:
 	make clean
-	make dLib
+	make json$(dLibMakeFormat)
 	make app
 	./$(appName)
 
