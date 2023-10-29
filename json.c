@@ -82,7 +82,7 @@ BOOL APIENTRY DllMain(HINSTANCE instance, DWORD reason, LPVOID reserved) {
 #endif
 
 /**
- * FIXME: Definición de {@code newJsonItem}.
+ * FIXME: Description of {@code newJsonItem}.
  * Crea un nuevo JsonItem y asociarlo a un JsonItem parámetro brother que dirá si es un hermano (diferente a 0), o un hijo (0).
  */
 LANGUAGE DLLIMPORT CALLING JsonItem* newJsonItem(int type, char* name, char* value, JsonItem* ref, int brother) {
@@ -154,7 +154,7 @@ LANGUAGE DLLIMPORT CALLING JsonItem* newJsonItem(int type, char* name, char* val
 }
 
 /**
- * FIXME: Definición de {@code addChild}.
+ * FIXME: Description of {@code addChild}.
  * Asigna un nuevo hijo a un JsonItem.
  */
 LANGUAGE DLLIMPORT CALLING void addChild(JsonItem* father, JsonItem* newChild) {
@@ -178,7 +178,7 @@ LANGUAGE DLLIMPORT CALLING void addChild(JsonItem* father, JsonItem* newChild) {
 }
 
 /**
- * FIXME: Definición de {@code updateJsonItemLevels}.
+ * FIXME: Description of {@code updateJsonItemLevels}.
  * Actualiza el nivel de un json item y sus descendientes.
  */
 CALLING void updateJsonItemLevels(JsonItem* root, int level) {
@@ -197,7 +197,7 @@ CALLING void updateJsonItemLevels(JsonItem* root, int level) {
 }
 
 /**
- * FIXME: Definición de {@code deleteJsonItemChilds}.
+ * FIXME: Description of {@code deleteJsonItemChilds}.
  * Borra y libera la memoria de un JsonItem y todos sus descendientes.
  */
 CALLING void deleteJsonItemChilds(JsonItem** toErase) {
@@ -234,7 +234,7 @@ CALLING void deleteJsonItemChilds(JsonItem** toErase) {
 }
 
 /**
- * FIXME: Definición de {@code deleteJsonItem}.
+ * FIXME: Description of {@code deleteJsonItem}.
  * Borra y libera la memoria de un JsonItem y todos sus descendientes, y deja el json item apuntando a NULL.
  */
 LANGUAGE DLLIMPORT CALLING void deleteJsonItem(JsonItem** toErase) {
@@ -243,7 +243,7 @@ LANGUAGE DLLIMPORT CALLING void deleteJsonItem(JsonItem** toErase) {
 }
 
 /**
- * FIXME: Definición de {@code setJsonItemName}.
+ * FIXME: Description of {@code setJsonItemName}.
  * Cambia el campo name de un JsonItem por el de un array especificado.
  */
 LANGUAGE DLLIMPORT CALLING void setJsonItemName(JsonItem* aux, char* name) {
@@ -256,7 +256,7 @@ LANGUAGE DLLIMPORT CALLING void setJsonItemName(JsonItem* aux, char* name) {
 }
 
 /**
- * FIXME: Definición de {@code setJsonItemValue}.
+ * FIXME: Description of {@code setJsonItemValue}.
  * Cambia el campo value de un JsonItem por el de un array especificado.
  */
 LANGUAGE DLLIMPORT CALLING void setJsonItemValue(JsonItem* aux, char* value) {
@@ -268,7 +268,7 @@ LANGUAGE DLLIMPORT CALLING void setJsonItemValue(JsonItem* aux, char* value) {
 }
 
 /**
- * FIXME: Definición de {@code findJsonItem}.
+ * FIXME: Description of {@code findJsonItem}.
  * Encuentra un JsonItem en un JsonItem father.
  */
 LANGUAGE DLLIMPORT CALLING JsonItem* findJsonItem(JsonItem* father, int nargs, ...) {
@@ -311,7 +311,7 @@ LANGUAGE DLLIMPORT CALLING JsonItem* findJsonItem(JsonItem* father, int nargs, .
 }
 
 /**
- * FIXME: Definición de {@code findRoot}.
+ * FIXME: Description of {@code findRoot}.
  * Obtiene la raíz de un JsonItem.
  */
 CALLING JsonItem* findRoot(JsonItem* firstJsonItem) {
@@ -326,7 +326,7 @@ CALLING JsonItem* findRoot(JsonItem* firstJsonItem) {
 }
 
 /**
- * FIXME: Definición de {@code countJsonItems}.
+ * FIXME: Description of {@code countJsonItems}.
  * Obtiene la cantidad de descendientes de un JsonItem indicado.
  */
 CALLING int countJsonItems(JsonItem* root) {
@@ -348,7 +348,7 @@ CALLING int countJsonItems(JsonItem* root) {
 }
 
 /**
- * FIXME: Definición de {@code findMaxLevel}.
+ * FIXME: Description of {@code findMaxLevel}.
  * Obtiene la mayor profundidad de un JsonItem.
  */
 CALLING int findMaxLevel(JsonItem* firstJsonItem, int level) {
@@ -370,7 +370,7 @@ CALLING int findMaxLevel(JsonItem* firstJsonItem, int level) {
 }
 
 /**
- * FIXME: Definición de {@code printArray}.
+ * FIXME: Description of {@code printArray}.
  * Imprime un array sin los caracteres de escape.
  */
 CALLING void printArray(char* array) {
@@ -401,7 +401,7 @@ CALLING void printArray(char* array) {
 }
 
 /**
- * FIXME: Definición de {@code sprintArray}.
+ * FIXME: Description of {@code sprintArray}.
  * Copia un array de entrada en otro sin los caracteres de escape.
  */
 CALLING void sprintArray(char* output, char* input) {
@@ -432,7 +432,7 @@ CALLING void sprintArray(char* output, char* input) {
 }
 
 /**
- * FIXME: Definición de {@code printAllJsonItems}.
+ * FIXME: Description of {@code printAllJsonItems}.
  * Muestra un JsonItem, childs dice si imprime todos sus hijos y brother dice si imprime todos sus hermanos, tab1 indica la cantidad de tabulaciones antes de imprimir cada JsonItem.
  */
 CALLING void printAllJsonItems(FILE* file, JsonItem* firstJsonItem, int childs, int brothers, int tab1, int tab2) {
@@ -522,7 +522,7 @@ CALLING void printAllJsonItems(FILE* file, JsonItem* firstJsonItem, int childs, 
 }
 
 /**
- * FIXME: Definición de {@code printJsonItem}.
+ * FIXME: Description of {@code printJsonItem}.
  * Invoca al método que imprime los JsonItems.
  */
 LANGUAGE DLLIMPORT CALLING void printJsonItem(char* fileSource, char* openType, JsonItem* root, int childs) {
@@ -542,7 +542,7 @@ LANGUAGE DLLIMPORT CALLING void printJsonItem(char* fileSource, char* openType, 
 }
 
 /**
- * FIXME: Definición de {@code isLetter}.
+ * FIXME: Description of {@code isLetter}.
  * Evalúa si un caracter es una letra. Devuelve 1 caso afirmativo o caso contrario 0.
  */
 CALLING char isLetter(char c) {
@@ -553,7 +553,7 @@ CALLING char isLetter(char c) {
 }
 
 /**
- * FIXME: Definición de {@code isNumber}.
+ * FIXME: Description of {@code isNumber}.
  * Evalúa si un caracter es un número o un signo. Devuelve 1 caso afirmativo o caso contrario 0.
  */
 CALLING char isNumber(char c) {
@@ -564,7 +564,7 @@ CALLING char isNumber(char c) {
 }
 
 /**
- * FIXME: Definición de {@code validateBoolean}.
+ * FIXME: Description of {@code validateBoolean}.
  * Valida si un array tiene un boolean válido.
  */
 CALLING int validateBoolean(char* array) {
@@ -579,7 +579,7 @@ CALLING int validateBoolean(char* array) {
 }
 
 /**
- * FIXME: Definición de {@code validateNumber}.
+ * FIXME: Description of {@code validateNumber}.
  * Valida si un array tiene un número válido.
  */
 CALLING int validateNumber(char* array) {
@@ -656,7 +656,7 @@ CALLING int validateNumber(char* array) {
 }
 
 /**
- * FIXME: Definición de {@code getJsonType}.
+ * FIXME: Description of {@code getJsonType}.
  * Obtiene el tipo de json que hay en un archivo. tipo 1 = los caracteres especiales \" se escriben precedidos de slash (\\ \") y los unicode de dos slash (\\u) (json dentro de un string). tipo 0 = los caracteres especiales \" no se escriben precedidos de slash (\ ") y los unicode de un slash (\u) (json común).
  */
 CALLING int getJsonType(char* fileSource) {
@@ -686,7 +686,7 @@ CALLING int getJsonType(char* fileSource) {
 }
 
 /**
- * FIXME: Definición de {@code nextWord}.
+ * FIXME: Description of {@code nextWord}.
  * Obtiene la siguiente palabra del json.
  */
 LANGUAGE DLLIMPORT CALLING void nextWord(FILE* file, char* word, int jsonType) {
@@ -813,7 +813,7 @@ LANGUAGE DLLIMPORT CALLING void nextWord(FILE* file, char* word, int jsonType) {
 }
 
 /**
- * FIXME: Definición de {@code obtainJsonItems}.
+ * FIXME: Description of {@code obtainJsonItems}.
  * Obtiene los JsonItem de un archivo, type indica el tipo de json, father indica un JsonItem de referencia para insertarle JsonItems hijo.
  */
 CALLING JsonItem* obtainJsonItems(FILE* file, int jsonType, JsonItem* father, int status, char* word) {
@@ -1000,7 +1000,7 @@ CALLING JsonItem* obtainJsonItems(FILE* file, int jsonType, JsonItem* father, in
 }
 
 /**
- * FIXME: Definición de {@code getJsonItems}.
+ * FIXME: Description of {@code getJsonItems}.
  * Crea JsonItem en base a la ruta de un archivo indicado por fileSource.
  */
 LANGUAGE DLLIMPORT CALLING JsonItem* getJsonItems(char* fileSource) {
@@ -1018,7 +1018,7 @@ LANGUAGE DLLIMPORT CALLING JsonItem* getJsonItems(char* fileSource) {
 }
 
 /**
- * FIXME: Definición de {@code swapJsonItems}.
+ * FIXME: Description of {@code swapJsonItems}.
  * Intercambia los valores de dos JsonItem.
  */
 LANGUAGE DLLIMPORT CALLING void swapJsonItems(JsonItem** first, JsonItem** second) {
