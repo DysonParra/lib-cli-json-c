@@ -281,7 +281,7 @@ LANGUAGE DLLIMPORT CALLING JsonItem* findJsonItem(JsonItem* father, int nargs, .
 
     va_end(ap);                                         // Finaliza la lista de parámetros.
 
-    // for (int i =0; i< nargs; i++)                    // Recorre el array con los parámetros.
+    // for (int i = 0; i < nargs; i++)                  // Recorre el array con los parámetros.
     //   printf("Arg %d = \"%s\"\n", i, params[i]);     // Muestra el parámetro actual.
 
     JsonItem* aux = father->firstChild;                 // Crea JsonItem para recorrer los hijos del JsonItem parámetro.
